@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ff7c4aa-3a0b-4bbc-b089-434c63c729f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/Api/AllApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/Stepdef/Api/APIDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/Stepdef/Web/WebDef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/Web/WebAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/utilitas/Endpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/utilitas/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/utilitas/geneAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/Automate/utilitas/schema.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/API/DELETE.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/API/GET.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/API/POST.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/API/UPDATE.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Delete/Delete_user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Delete/Delete_userError.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Get/GET_All.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Get/GET_Single.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Get/GET_Tag.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Post/Post.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Post/Post_invalid.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Schema/Update/Update_user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/WEB/Login.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Portofolio" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZLbnXz1SczbCkPl8o6ncutpIuw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cucumber Java.Feature: GET.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: UPDATE.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Dapat melakukan delet user.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Hit API dan mendapatkan All Users.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Login ke website dengan valid user.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Login ke website.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Membuat user baru.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: Update user yang sudah ada.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Portofolio.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lintang_hann/Documents/Gradle/Portofolio&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.24252874&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/Schema/Get" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Schema/Post" />
+      <recent name="$PROJECT_DIR$/src/test/resources/Schema" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Login ke website dengan valid user">
+    <configuration name="Feature: UPDATE" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API/UPDATE.feature" />
+      <option name="GLUE" value="com.Automate" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Portofolio.test" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: UPDATE" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Dapat melakukan delet user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API/DELETE.feature" />
+      <option name="GLUE" value="com.Automate" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Portofolio.test" />
+      <option name="NAME_FILTER" value="^Dapat melakukan delet user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Dapat melakukan delet user$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Dapat melakukan delet user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Login ke website dengan valid user" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/WEB/Login.feature" />
+      <option name="GLUE" value="com.Automate" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Portofolio.test" />
+      <option name="NAME_FILTER" value="^Login ke website dengan valid user$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login ke website dengan valid user$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login ke website dengan valid user" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Login ke website" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/WEB/Login.feature" />
+      <option name="GLUE" value="com.Automate" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Portofolio.test" />
+      <option name="NAME_FILTER" value="^Login ke website$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login ke website$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login ke website" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Update user yang sudah ada" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API/UPDATE.feature" />
+      <option name="GLUE" value="com.Automate" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Portofolio.test" />
+      <option name="NAME_FILTER" value="^Update user yang sudah ada$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Update user yang sudah ada$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Update user yang sudah ada" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Login ke website dengan valid user" />
+        <item itemvalue="Cucumber Java.Scenario: Login ke website" />
+        <item itemvalue="Cucumber Java.Scenario: Dapat melakukan delet user" />
+        <item itemvalue="Cucumber Java.Feature: UPDATE" />
+        <item itemvalue="Cucumber Java.Scenario: Update user yang sudah ada" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-8336523bb0d9-804eb45d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ff7c4aa-3a0b-4bbc-b089-434c63c729f9" name="Changes" comment="" />
+      <created>1702192857971</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702192857971</updated>
+    </task>
+    <servers />
+  </component>
+</project>
