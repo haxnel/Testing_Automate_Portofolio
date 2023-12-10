@@ -64,6 +64,8 @@ public class WebAll {
             driver.findElement(passinputSign).sendKeys(kunci);
         } else if(pass.equals("testing")) {
             driver.findElement(passInputLogin).sendKeys(pass);
+        } else if (pass.equals("asdasdas")){
+            driver.findElement(passInputLogin).sendKeys(pass);
         } else {
             driver.findElement(passinputSign).sendKeys(pass);
         }
@@ -97,15 +99,16 @@ public class WebAll {
     }
 
     //Checkout
-    public void userClickSalahSatuBarang() throws InterruptedException {
-        By barang1 = By.cssSelector("#tbodyid > div:nth-child(1) > div");
+    public void userClickSalahSatuBarang() {
+        By barang1 = By.cssSelector("#tbodyid > div:nth-child(1)");
         By barang2 = By.cssSelector("#tbodyid > div:nth-child(6) > div > div > h4 > a");
         By next = By.cssSelector("#next2");
-        By place = By.cssSelector("#tbodyid > div.row > div > a");
+        By place = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
         By home = By.cssSelector("#navbarExample > ul > li.nav-item.active > a");
         FluentWait <WebDriver> wait = new FluentWait<>(driver);
         wait.withTimeout(Duration.ofMinutes(1));
-        wait.pollingEvery(Duration.ofSeconds(10));
+        wait.pollingEvery(Duration.ofSeconds(20));
+
 
         wait.until(ExpectedConditions.elementToBeClickable(barang1));
         driver.findElement(barang1).click();
@@ -114,9 +117,7 @@ public class WebAll {
 
         driver.findElement(home).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(next));
-        Thread.sleep(3000);
         driver.findElement(next).click();
-        Thread.sleep(3000);
 
         wait.until(ExpectedConditions.elementToBeClickable(barang2));
         driver.findElement(barang2).click();
@@ -129,21 +130,22 @@ public class WebAll {
         driver.findElement(cart).click();
     }
 
-    public void delete_cart() throws InterruptedException {
-        By delete = By.cssSelector("#tbodyid > tr > td:nth-child(4) > a");
+    public void delete_cart() {
+        By delete = By.xpath("//*[@id=\"tbodyid\"]/tr[1]/td[4]/a");
         FluentWait <WebDriver> wait = new FluentWait<>(driver);
         wait.withTimeout(Duration.ofMinutes(1));
         wait.pollingEvery(Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(delete));
         driver.findElement(delete).click();
-        Thread.sleep(3000);
         driver.findElement(delete).click();
-        Thread.sleep(3000);
     }
 
-    public void validasiCheck () throws InterruptedException {
+    public void validasiCheck () {
         By val = By.cssSelector("#tbodyid");
-        Thread.sleep(3000);
+        FluentWait <WebDriver> wait = new FluentWait<>(driver);
+        wait.withTimeout(Duration.ofMinutes(1));
+        wait.pollingEvery(Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(val));
         Assertions.assertFalse(driver.findElement(val).getText().contains("Samsung galaxy s6"));
 
     }

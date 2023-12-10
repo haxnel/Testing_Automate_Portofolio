@@ -1,5 +1,6 @@
 Feature: Checkout barang
 
+  @WebTest
   Scenario: Dapat melakukan Checkout barang
     Given User berada pada home page
     And User Click multiple barang

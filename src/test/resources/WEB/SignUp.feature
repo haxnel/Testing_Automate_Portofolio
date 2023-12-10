@@ -1,5 +1,5 @@
 Feature: Sign up
-
+  @WebTest
   Scenario: Dapat melakukan Sign Up
     Given User berada pada home page
     And User Click "Sign up 1"
@@ -7,7 +7,7 @@ Feature: Sign up
     And User memasukan password "Pass baru"
     When User Click "Sign up 2"
     Then Muncul pop up dengan tulisan "Sign up successful."
-
+  @WebTest
   Scenario: Melakukan Sign Up dengan user terdaftar
     Given User berada pada home page
     And User Click "Sign up 1"

@@ -7,7 +7,7 @@ Feature: Testing Website
     And User memasukan username "testiop"
     And User memasukan password "testing"
     When User click tombol login
-    Then User dapat melihat akun masuk dengan "Welcome asdkiiek"
+    Then User dapat melihat akun masuk dengan "Welcome testiop"
 
   @WebTest
   Scenario: Login ke website dengan invalid user

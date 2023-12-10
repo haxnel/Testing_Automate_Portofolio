@@ -55,7 +55,7 @@ public class WebDef extends BaseTest {
 
     //Delete product//
     @And("User Click multiple barang")
-    public void userClickSalahSatuBarang() throws InterruptedException {
+    public void userClickSalahSatuBarang(){
         webAll.userClickSalahSatuBarang();
     }
 
@@ -65,12 +65,12 @@ public class WebDef extends BaseTest {
     }
 
     @When("User click delete barang")
-    public void userClickDeleteBarang() throws InterruptedException {
+    public void userClickDeleteBarang() {
         webAll.delete_cart();
     }
 
     @Then("Barang sudah tidak ada pada list")
-    public void barangSudahTidakAdaPadaList() throws InterruptedException {
+    public void barangSudahTidakAdaPadaList() {
         webAll.validasiCheck();
     }
     //End//

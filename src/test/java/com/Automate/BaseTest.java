@@ -9,11 +9,13 @@ public class BaseTest {
     protected static WebDriver driver;
 
     public void GetDriver(){
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
-        //WebDriverManager.chromedriver().setup();
-        //driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
 
-        driver = WebDriverManager.chromedriver().create();
+
+        //driver = WebDriverManager.chromedriver().create();
+
     }
 }
