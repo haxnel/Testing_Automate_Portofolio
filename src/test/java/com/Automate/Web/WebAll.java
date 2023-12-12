@@ -20,6 +20,15 @@ public class WebAll {
     By namaUser = By.cssSelector("#nameofuser");
     By clickSignup1 = By.cssSelector("#signin2");
     By clickSignUp2 = By.cssSelector("#signInModal > div > div > div.modal-footer > button.btn.btn-primary");
+    By order = By.cssSelector("#page-wrapper > div > div.col-lg-1 > button");
+
+    By namePlace = By.cssSelector("#name");
+    By countryPlace = By.cssSelector("#country");
+    By cityPlace = By.cssSelector("#city");
+    By creditPlace = By.cssSelector("#card");
+    By monthPlace = By.cssSelector("#month");
+    By yearPlace = By.cssSelector("#year");
+    By purchase = By.cssSelector("#orderModal > div > div > div.modal-footer > button.btn.btn-primary");
 
     WebDriver driver;
 
@@ -99,7 +108,7 @@ public class WebAll {
     }
 
     //Checkout
-    public void userClickSalahSatuBarang() {
+    public void userClickSalahSatuBarang(String barang) throws InterruptedException {
         By barang1 = By.cssSelector("#tbodyid > div:nth-child(1)");
         By barang2 = By.cssSelector("#tbodyid > div:nth-child(6) > div > div > h4 > a");
         By next = By.cssSelector("#next2");
@@ -107,46 +116,81 @@ public class WebAll {
         By home = By.cssSelector("#navbarExample > ul > li.nav-item.active > a");
         FluentWait <WebDriver> wait = new FluentWait<>(driver);
         wait.withTimeout(Duration.ofMinutes(1));
-        wait.pollingEvery(Duration.ofSeconds(20));
+        wait.pollingEvery(Duration.ofSeconds(10));
 
+        if (barang.equals("single")){
+            wait.until(ExpectedConditions.elementToBeClickable(barang1));
+            driver.findElement(barang1).click();
 
-        wait.until(ExpectedConditions.elementToBeClickable(barang1));
-        driver.findElement(barang1).click();
-        wait.until(ExpectedConditions.elementToBeClickable(place));
-        driver.findElement(place).click();
+            wait.until(ExpectedConditions.elementToBeClickable(place));
+            driver.findElement(place).click();
 
-        driver.findElement(home).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(next));
-        driver.findElement(next).click();
+        } else if (barang.equals("multiple")){
+            wait.until(ExpectedConditions.elementToBeClickable(barang1));
+            driver.findElement(barang1).click();
 
-        wait.until(ExpectedConditions.elementToBeClickable(barang2));
-        driver.findElement(barang2).click();
-        wait.until(ExpectedConditions.elementToBeClickable(place));
-        driver.findElement(place).click();
+            wait.until(ExpectedConditions.elementToBeClickable(place));
+            driver.findElement(place).click();
+
+            driver.findElement(home).click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(next));
+            Thread.sleep(5000);
+            driver.findElement(next).click();
+
+            Thread.sleep(5000);
+            wait.until(ExpectedConditions.elementToBeClickable(barang2));
+            driver.findElement(barang2).click();
+            wait.until(ExpectedConditions.elementToBeClickable(place));
+            driver.findElement(place).click();
+        } else {
+            System.out.println("Masukan barang");
+        }
     }
 
-    public void clickcart(){
+    public void clickcart() throws InterruptedException {
         By cart = By.cssSelector("#cartur");
         driver.findElement(cart).click();
+        Thread.sleep(5000);
     }
 
-    public void delete_cart() {
-        By delete = By.xpath("//*[@id=\"tbodyid\"]/tr[1]/td[4]/a");
+
+    public void clickPlaceOrder() {
         FluentWait <WebDriver> wait = new FluentWait<>(driver);
         wait.withTimeout(Duration.ofMinutes(1));
         wait.pollingEvery(Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(delete));
-        driver.findElement(delete).click();
-        driver.findElement(delete).click();
+        wait.until(ExpectedConditions.elementToBeClickable(order));
+        driver.findElement(order).click();
     }
-
-    public void validasiCheck () {
-        By val = By.cssSelector("#tbodyid");
+    public void userMengisiFormDenganDan(String name, String country, String city, String credit, String month, String year){
         FluentWait <WebDriver> wait = new FluentWait<>(driver);
         wait.withTimeout(Duration.ofMinutes(1));
         wait.pollingEvery(Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(val));
-        Assertions.assertFalse(driver.findElement(val).getText().contains("Samsung galaxy s6"));
 
+        wait.until(ExpectedConditions.elementToBeClickable(namePlace));
+        driver.findElement(namePlace).sendKeys(name);
+        driver.findElement(countryPlace).sendKeys(country);
+        driver.findElement(cityPlace).sendKeys(city);
+        driver.findElement(creditPlace).sendKeys(credit);
+        driver.findElement(monthPlace).sendKeys(month);
+        driver.findElement(yearPlace).sendKeys(year);
+    }
+
+    public void clickTombolPurchase(){
+        FluentWait <WebDriver> wait = new FluentWait<>(driver);
+        wait.withTimeout(Duration.ofMinutes(1));
+        wait.pollingEvery(Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(purchase));
+        driver.findElement(purchase).click();
+    }
+    public void menampilkanPopUpPembayaran(String pop) throws InterruptedException {
+        Thread.sleep(2000);
+        Assertions.assertTrue(driver.getPageSource().contains(pop));
+        driver.findElement(By.cssSelector("body > div.sweet-alert.showSweetAlert.visible > div.sa-button-container > div > button"));
+    }
+    public void errorPurchase(String error) throws InterruptedException {
+        Thread.sleep(1000);
+        String text = driver.switchTo().alert().getText();
+        Assertions.assertEquals(text, error);
+        driver.switchTo().alert().accept();
     }
 }

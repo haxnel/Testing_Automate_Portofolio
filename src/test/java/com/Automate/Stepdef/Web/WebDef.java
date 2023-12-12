@@ -54,24 +54,42 @@ public class WebDef extends BaseTest {
     }
 
     //Delete product//
-    @And("User Click multiple barang")
-    public void userClickSalahSatuBarang(){
-        webAll.userClickSalahSatuBarang();
+    @And("User Click {string} barang")
+    public void userClickSalahSatuBarang(String barang) throws InterruptedException {
+        webAll.userClickSalahSatuBarang(barang);
     }
 
     @And("User click cart")
-    public void userClickCart() {
+    public void userClickCart() throws InterruptedException {
+        webAll = new WebAll(driver);
         webAll.clickcart();
     }
 
-    @When("User click delete barang")
-    public void userClickDeleteBarang() {
-        webAll.delete_cart();
+    //---End----//
+
+    //Purchase
+    @And("Click Place order")
+    public void clickPlaceOrder(){
+        webAll.clickPlaceOrder();
     }
 
-    @Then("Barang sudah tidak ada pada list")
-    public void barangSudahTidakAdaPadaList() {
-        webAll.validasiCheck();
+    @And("User mengisi form dengan {string}, {string}, {string}, {string}, {string}, dan {string}")
+    public void userMengisiFormDenganDan(String name, String country, String city, String credit, String month, String year) {
+        webAll.userMengisiFormDenganDan(name,country,city,credit,month,year);
     }
-    //End//
+
+    @When("click tombol Purchase")
+    public void clickTombolPurchase() {
+        webAll.clickTombolPurchase();
+    }
+
+    @Then("Menampilkan pop up {string}")
+    public void menampilkanPopUp(String pembayaran) throws InterruptedException {
+        webAll.menampilkanPopUpPembayaran(pembayaran);
+    }
+
+    @Then("User tidak dapat melanjutkan dan melihat tulisan {string}")
+    public void userTidakDapatMelanjutkanDanMelihatTulisan(String err) throws InterruptedException {
+        webAll.errorPurchase(err);
+    }
 }
