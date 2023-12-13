@@ -74,3 +74,22 @@ task apiTest(){
         }
     }
 }
+
+task AllTest(){
+    description ("Menjalankan testing web")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/index.html',
+                    '--plugin', 'json:reports/cucumberALL_Test.json',
+                    '--plugin', 'pretty',
+                    '--glue', 'com.Automate',
+                    '--tags', "${tags}",
+                    'src/test/resources'
+            ]
+        }
+    }
+}
