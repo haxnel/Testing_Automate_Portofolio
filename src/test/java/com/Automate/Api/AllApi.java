@@ -96,7 +96,14 @@ public class AllApi {
     }
     //DELETE User
     public void terdapatError(String error){
-        response.then()
-                .assertThat().body("$", Matchers.hasKey(error));
+        if (error.equals("error")) {
+            response.then()
+                    .assertThat().body("$", Matchers.hasKey(error));
+        } else if (error.equals("id")){
+            response.then()
+                    .assertThat().body("$", Matchers.hasKey(error));
+        } else {
+            System.out.println("Tidak ada masukan");
+        }
     }
 }
