@@ -57,7 +57,7 @@ jobs:
       - name: Wait for other Job
         uses: NathanFirmo/wait-for-other-job@v1.1.1
         with:
-          token: ${{ secrets.TOKEN_GITHUB }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           job: 'run-automate-test-API'
           
     # Download Repo
