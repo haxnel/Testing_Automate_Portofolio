@@ -52,7 +52,7 @@ jobs:
         PUBLISH_DIR: reports
 
   #Menjalankan Tags @WebTest Test
-  run-automate-Web:
+  run-automate-test-Web:
     runs-on: ubuntu-latest
 
     steps:
@@ -109,7 +109,7 @@ jobs:
         uses: NathanFirmo/wait-for-other-job@v1.1.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          job: 'run-automate-test-API', "run-automate-Web"
+          job: 'run-automate-test-Web'
 
       # Download Repo
       - uses: actions/checkout@v3
