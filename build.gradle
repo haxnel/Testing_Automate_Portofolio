@@ -35,7 +35,7 @@ configurations {
 
 def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
 
-
+//Menjalankan hanya yang memiliki Tags @WebTest
 task webTest(){
     description ("Menjalankan testing web")
     dependsOn assemble, compileTestJava
@@ -44,6 +44,8 @@ task webTest(){
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
+                    '--plugin', 'html:reports/WebTest_Report.html',
+                    '--plugin', 'json:reports/cucumberWeb.json',
                     '--plugin', 'pretty',
                     '--glue', 'com.Automate',
                     '--tags', "@WebTest and not @exclude",
@@ -53,6 +55,7 @@ task webTest(){
     }
 }
 
+//Menjalankan hanya yang memiliki Tags @APITest
 task apiTest(){
     description ("Menjalankan testing API")
     dependsOn assemble, compileTestJava
@@ -61,6 +64,8 @@ task apiTest(){
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
+                    '--plugin', 'html:reports/APiTest_Report.html',
+                    '--plugin', 'json:reports/cucumberAPI.json',
                     '--plugin', 'pretty',
                     '--glue', 'com.Automate',
                     '--tags', "@APITest and not @exclude",
@@ -70,6 +75,7 @@ task apiTest(){
     }
 }
 
+//Menjalankan semua test
 task AllTest(){
     description ("Menjalankan testing API")
     dependsOn assemble, compileTestJava
